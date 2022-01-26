@@ -1,0 +1,21 @@
+# Ignore the Build directory
+build/
+
+# Ignore Git
+.git
+
+# Ignore Dockerfiles
+*Dockerfile*
+
+# Ignore Node Files
+node_modules
+
+# Ignore env file
+.env
+
+# Ignore dev tools
+.prettierrc
+setup.sh
+README.md
+
+# Ignore secrets
