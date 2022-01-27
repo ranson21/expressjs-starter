@@ -4,6 +4,7 @@ import jwt from "express-jwt";
 import cors from "cors";
 
 // Local dependencies
+import { getText } from "src/constants";
 
 /**
  * Start -- Loads the service
@@ -29,9 +30,8 @@ export async function start() {
   const host = process.env.HOST || "127.0.0.1";
 
   // Start the gateway server
-  app.listen({ port, host }, () =>
-    console.log(`🚀 Server running at ${host}:${port}`)
-  );
+  await app.listen({ port, host });
+  console.log(getText("SERVER_STARTUP", { host, port }));
 }
 
 // Start the service unless we are testing

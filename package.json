@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "setup": "./scripts/setup.sh",
     "start": "source .env && backpack",
     "build": "backpack build",
@@ -37,6 +37,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.1.0",
     "jest": "^25.0.0",
+    "jest-express": "^1.12.0",
     "lint-staged": "^12.3.1",
     "prettier": "^1.18.2",
     "webpack-node-externals": "^3.0.0"

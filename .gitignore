@@ -6,3 +6,6 @@ build/
 
 # Ignore Environment variables
 .env
+
+# Ignore test coverage files
+coverage/
