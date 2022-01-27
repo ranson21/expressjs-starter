@@ -5,6 +5,8 @@ import cors from "cors";
 
 // Local dependencies
 import { getText } from "src/constants";
+import { routes } from "src/router";
+import { newLogger } from "src/middleware";
 
 /**
  * Start -- Loads the service
@@ -24,6 +26,12 @@ export async function start() {
       credentialsRequired: false
     })
   );
+
+  // Attach the logger
+  app.use(newLogger());
+
+  // Attach the router
+  app.use(routes());
 
   // Set the Port and Host
   const port = process.env.PORT || 4000;
